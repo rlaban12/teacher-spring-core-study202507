@@ -1,5 +1,6 @@
 package com.spring.core.chap01;
 
+import com.spring.core.chap01.manage.HotelManager;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +11,10 @@ class HotelTest {
     @Test
     void hotel() {
 
-        // 호텔에 예약
-        Hotel hotel = new Hotel();
+        // 호텔객체를 생성 - 매니저한테 문의
+        HotelManager manager = new HotelManager();
+
+        Hotel hotel = manager.hotel();
         hotel.reserve();
 
     }
